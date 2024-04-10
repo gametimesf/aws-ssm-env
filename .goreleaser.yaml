@@ -23,7 +23,7 @@ archives:
   - format: zip
     name_template: >-
       {{ .ProjectName }}-
-      v{{ .Version }}-
+      {{- .Tag }}-
       {{- tolower .Os }}-
       {{- if eq .Arch "x86_64" }}amd64
       {{- else if eq .Arch "386" }}i386
