@@ -70,19 +70,21 @@ go get:
 ```
 Or download [binary](https://github.com/gametimesf/aws-ssm-env/releases/latest):
 ```
-> wget -O aws-ssm-env.zip https://github.com/gametimesf/aws-ssm-env/releases/download/v2.0.0/aws-ssm-env-v2.0.0-linux-amd64.zip
+> wget -O aws-ssm-env.zip https://github.com/gametimesf/aws-ssm-env/releases/download/v2.0.3/aws-ssm-env-v2.0.3-linux-amd64.zip
 > unzip aws-ssm-env.zip
 > chmod 755 aws-ssm-env
 ```
 
-### Release File Generation
-Follow the steps below to create the zip files needed for the release. The value for tag should match your release tag version.
-```
-export TAG=v2.0.2
-make release
-```
-
 **Note**: If you receive the following error: `unknown directive: toolchain`, you must first upgrade to Go 1.21 or higher.
+
+### Creating a new release
+
+Simply create a new tag and push it to the repository. The GitHub Actions workflow will automatically build and release the new version.
+
+```bash
+git tag vX.X.X
+git push --tags
+```
 
 ### Author
 Jamie Tsao
