@@ -87,7 +87,7 @@ git push --tags
 ```
 
 ### Author
-Jamie Tsao
+Gametime Engineering
 
 ### License
 MIT
