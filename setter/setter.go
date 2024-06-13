@@ -21,7 +21,7 @@ type (
 
 // NewSetter creates a new service that can store key value pairs in the parameter store
 // ssmRegion: the region where the parameter store is located
-func NewSetter(ssmRegion string, debug bool) *service {
+func NewSetter(ssmRegion string) *service {
 	awsConfig := aws.NewConfig()
 	if ssmRegion != "" {
 		awsConfig = awsConfig.WithRegion(ssmRegion)
