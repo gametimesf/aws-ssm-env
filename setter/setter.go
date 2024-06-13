@@ -11,7 +11,7 @@ import (
 
 type (
 	Setter interface {
-		Set(key string, value interface{})
+		PutParameter(ctx context.Context, key string, value string, valueType string, allowOverwrite bool) error
 	}
 
 	service struct {
