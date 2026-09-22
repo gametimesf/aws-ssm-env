@@ -5,7 +5,7 @@
 # yaml-language-server: $schema=https://goreleaser.com/static/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 
-version: 1
+version: 2
 
 before:
   hooks:
@@ -20,7 +20,8 @@ builds:
       - darwin
 
 archives:
-  - format: zip
+  - formats:
+      - zip
     name_template: >-
       {{ .ProjectName }}-
       {{- .Tag }}-
